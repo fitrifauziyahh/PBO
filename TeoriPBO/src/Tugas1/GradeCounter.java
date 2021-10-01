@@ -15,15 +15,20 @@ public class GradeCounter {
     public static void main(String[] args) {
         double nilaiTugas, nilaiUTS, nilaiUAS, nilaiAkhir;
         char grade;
+        String nim, nama;
         Scanner input = new Scanner(System.in);
         
         System.out.println("--GRADE COUNTER--\n");
-        System.out.println("Silakan masukkan nilai berikut.");
-        System.out.println("nilai tugas: ");
+        System.out.print("NIM        : ");
+        nim = input.nextLine();
+        System.out.print("nama       : ");
+        nama = input.nextLine();
+        System.out.println("\nSilakan masukkan nilai berikut.");
+        System.out.print("nilai tugas: ");
         nilaiTugas = input.nextDouble();
-        System.out.println("nilai UTS  : ");
+        System.out.print("nilai UTS  : ");
         nilaiUTS = input.nextDouble();
-        System.out.println("nilai UAS  : ");
+        System.out.print("nilai UAS  : ");
         nilaiUAS = input.nextDouble();
         nilaiAkhir = 0.2 * nilaiTugas + 0.35 * nilaiUTS + 0.45 * nilaiUAS;
         
@@ -37,6 +42,8 @@ public class GradeCounter {
             grade = 'D';
         else
             grade = 'E';
-        System.out.println("Hasil    : Predikat '" + grade + "' dengan nilai akhir " + nilaiAkhir);
+        System.out.println("\nNIM        : " + nim);
+        System.out.println("nama       : " + nama);
+        System.out.println("hasil      : Predikat '" + grade + "' dengan nilai akhir " + nilaiAkhir);
     }
 }
